@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+.Container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.sideBar{
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    min-width: 240px;
+    width: 240px;
+    background:#fff;
+    
+}
+
+.topSection{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15px;/*space b/w logo and text*/
+    cursor: pointer;
+    padding: 8px 0;
+    background:#D7C7F4
+}
+.logoimg{
+    height: 35px;
+    width: 35px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.logoimg2{
+    height: 25px;
+    width: 25px;
+    object-fit: contain;
+    margin-left: auto;
+
+}
+.newChat{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.conversation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatArea{
+    display: flex;
+    background: #e7dff7;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.chatHeader{
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0,0.1);
+    color: #9785BA;
+}
+
+.introContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.introContent img{
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.card{
+    text-align: left;
+    background:#fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 5px 15px 15px 5px rgba(0,0,0,0.05);
+}

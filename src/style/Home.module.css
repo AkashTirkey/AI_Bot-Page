@@ -67,9 +67,13 @@ body{
 }
 
 .chatHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-bottom: 20px;
-    border-bottom: 1px solid rgba(0, 0, 0,0.1);
+    /* border-bottom: 1px solid rgba(0, 0, 0,0.1); */
     color: #9785BA;
+    padding-left: 10px;
 }
 
 .introContent{
@@ -77,6 +81,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 .introContent img{
     height: 70px;
@@ -89,12 +94,151 @@ body{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 20px;
+    width: 90%;
+    margin-top: 50px;
 }
 
 .card{
     text-align: left;
     background:#fff;
     padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 5px 15px 15px 5px rgba(0,0,0,0.05);
+    /* width: 100%; */
+}
+
+.inputWrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.inputSection{
+    /* margin-top: auto; */
+    display: flex;
+    /* align-items: center; */
+    gap: 15px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.textInput{
+    flex: 0 0 80%;
+    height: 45px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.buttonGroup{
+    display: flex;
+    gap: 10px;
+    flex: 1;
+}
+
+ .askBtn, .saveBtn{
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    flex: 1;
+}
+
+.askBtn{
+    background: #9785BA;
+    color: white;
+}
+
+.saveBtn{
+    background:#9785BA;
+    border: 1px solid #9785BA;
+    color: white;
+} 
+
+.sideBar{
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    width: 240px;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.menuBtn{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+
+@media (max-width:768px) {
+    .sideBar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 1000;
+        transform: translateX(-100%);
+    }
+
+    .active{
+        transform: translateX(0);
+    }
+
+    .menuBtn{
+        display: block;
+    }
+
+    .gridContainer{
+        grid-template-columns: 1fr;
+    }
+
+    .inputSection{
+        flex-direction: column;
+    }
+
+    .textInput{
+        width: 100%;
+        flex: none;
+    }
+
+    .buttonGroup{
+        width: 100%;
+    }
+
+    .gridContainer{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:600px){
+    .inputSection{
+        flex-direction: column;
+    }
+
+    .textInput{
+        flex: none;
+        width: 100%;
+    }
+
+    .buttonGroup{
+        width: 100%;
+    }
+
+    .askBtn, .saveBtn{
+        flex: 1;
+    }
 }

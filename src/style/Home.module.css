@@ -6,7 +6,7 @@ body{
 }
 .Container{
     display: flex;
-    height: 100vh;
+    min-height: 100dvh;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -189,9 +189,14 @@ body{
         position: fixed;
         top: 0;
         left: 0;
-        height: 100vh;
+        height: 100dvh;
         z-index: 1000;
         transform: translateX(-100%);
+    }
+
+    .chatHeader{
+        justify-content: flex-start;
+        gap: 10px;
     }
 
     .active{
@@ -200,10 +205,15 @@ body{
 
     .menuBtn{
         display: block;
+        order: -1;
     }
 
     .gridContainer{
         grid-template-columns: 1fr;
+    }
+
+    .card h3{
+        font-size: 1.8rem;
     }
 
     .inputSection{
